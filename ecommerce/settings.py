@@ -2,6 +2,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+WSGI_APPLICATION = "ecommerce.wsgi.application"
+
 SECRET_KEY = "django-insecure-change-this-later"
 
 DEBUG = True
