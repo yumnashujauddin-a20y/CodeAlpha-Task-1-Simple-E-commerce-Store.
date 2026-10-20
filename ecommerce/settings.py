@@ -1,14 +1,20 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 WSGI_APPLICATION = "ecommerce.wsgi.application"
 
-SECRET_KEY = "django-insecure-change-this-later"
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "simple-e-commerce-six.vercel.app",
+    ".vercel.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 INSTALLED_APPS = [
